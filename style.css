@@ -4,25 +4,35 @@ body{
 	font-size: 18px;
 	font-weight: 600;
 	background-color:#fff;
-	color: ;
-}
-
-.container{
-	padding: 1em;
-	height: 100%;
 }
 .head{
 	background-color: #f4ffe8;
-	box-shadow: 0px 20px 20px rgba(0,0,0,.2);
+	box-shadow: 0px 10px 10px rgba(0,0,0,.3);
 	padding: 1em;
 	border-radius: 4px;
 }
 form{
-	background-color: #f4ffe8;
+	background-image: linear-gradient(rgba(244, 255, 232, .2), rgba(144, 155, 132, .2));
 	padding: 1em;
 	border-radius: 4px;
-	box-shadow: 0px 20px 20px rgba(0,0,0,.2);
+	box-shadow: 0px 5px 5px rgba(0,0,0,.5);
+	width: 50%;
+	margin: 0 auto;
 }
 h1{
 	font-family: sans-serif;
+}
+
+button{
+	width: 100px;
+
+}
+
+@media(max-width:500px){
+	form{
+		width: 100%;
+		margin: 0;
+		padding: .5em; 
+	}
+
 }
