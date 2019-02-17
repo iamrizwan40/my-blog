@@ -33,15 +33,12 @@ div p.clearfix{
 		color: #000;
 		transition: 300ms ease-in-out;
 }
-form, .posts{
+form{
 	background-image: linear-gradient(rgba(244, 255, 232, .2), rgba(144, 155, 132, .2));
 	padding: 1em;
 	border-radius: 4px;
 	width: 50%;
 	margin: 0 auto;
-}
-.posts{
-	margin-top: 20px;
 }
 h1{
 	font-family: sans-serif;
@@ -53,15 +50,68 @@ button{
 
 }
 
+#posts{
+	margin: 3em 0em 3em 0;
+}
+
+#posts div.posts{
+	width: 50%;
+	margin: 0 auto;
+	padding: 1em;
+	background-image: linear-gradient(rgba(144, 155, 132, .2), rgba(244, 255, 232, .2));
+}
+#posts div.posts span{
+	margin-right: 20px;
+}
+#posts div.posts span:nth-child(2){
+	font-weight: none;
+	color: cornflowerblue;
+	font-size: 14px;
+}
+#posts div.posts p{
+	padding: 1.5em 0em 1.5em 0em;
+	font-weight: none;
+	color: #333;
+	font-size: 14px;
+}
 @media(max-width:500px){
-	form, .posts{
+	form{
 		width: 100%;
 		margin: 0;
 		padding: .5em; 
 	}
-
-	.posts{
-		margin-top: 20px;
+	#posts{
+		margin: 3em 0em 3em 0;
 	}
 
+	#posts div.posts{
+		width: 100%;
+		margin: 0 auto;
+		padding: 1em;
+		background-image: linear-gradient(rgba(144, 155, 132, .2), rgba(244, 255, 232, .2));
+	}
+	#posts div.posts span{
+		margin-right: 20px;
+	}
+	#posts div.posts span:nth-child(2){
+		font-weight: none;
+		color: cornflowerblue;
+		font-size: 14px;
+	}
+	#posts div.posts p{
+		padding: 1.5em 0em 1.5em 0em;
+		font-weight: none;
+		color: #333;
+		font-size: 14px;
+	}
+}
+
+ul.list-group li{
+	height: 80px;
+	line-height: 50px;
+}
+#posts div.posts textarea{
+	padding: .5em;
+	width: 100%;
+	border: none;
 }

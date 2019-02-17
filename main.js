@@ -1,56 +1,81 @@
-let name = document.querySelector('#name');
-let email = document.querySelector('#email');
-let message = document.querySelector('#message');
-let post = document.querySelector('.post');
 
-// select ul
-let ul = document.querySelector('ul');
-// create li
-let li = document.createElement('li');
-
-// create name span and text node
-// let nameSpan = document.createElement('span');
-// let nameSpanTxtNode = document.createTextNode(name.value);
-
-// create email span and textnode
-// let emailSpan = document.createElement('span');
-// let emailSpanTxtNode = document.createTextNode(email.value);
-
-// create a message pargraph and text node
-// let p = document.createElement('p');
-// let pTextNode = document.createTextNode(message.value);
-
-// append name span text node into name span
-// nameSpan.append(nameSpanTxtNode);
-
-// append email span text node into email span
-// emailSpan.append(emailSpanTxtNode);
-
-// append p text node into name p
-// p.append(pTextNode);
-
-// create li text nodes
-// let liTxtNode_1 = document.createTextNode(name.value);
-// let liTxtNode_2 = document.createTextNode(email.value);
-// let liTxtNode_3 = document.createTextNode(message.value);
-
-// append li text nodes
-
-post.addEventListener('click', postRender);
-function postRender(e) {
-	e.preventDefault();
+	let name = document.querySelector('#name');
+	let email = document.querySelector('#email');
+	let message = document.querySelector('#message');
+	let post = document.querySelector('.post')	
 	
-	// create li text nodes
-	let liTxtNode_1 = document.createTextNode(name.value);
-	let liTxtNode_2 = document.createTextNode(email.value);
-	let liTxtNode_3 = document.createTextNode(message.value);
-	
-	li.append(liTxtNode_1);
-	li.append(liTxtNode_2);
-	li.append(liTxtNode_3);
-	ul.append(li);
-	
-	name.value = '';
-	email.value = '';
-	message.value = '';
-}
+	document.addEventListener('DOMContentLoaded', () => {
+		post.onclick = (e) => {
+			e.preventDefault();
+			let posts = document.querySelector('#posts');
+			let postContent = document.createElement('div');
+			postContent.classList = 'posts';
+
+			let postName = document.createTextNode(name.value);
+			let postEmail = document.createTextNode('('+email.value+')');
+			let postMessage = document.createTextNode(message.value);
+			
+			let span1 = document.createElement('span');
+			let span2 = document.createElement('span');
+			let p = document.createElement('p');
+			let deleteBtn = document.createElement('button');
+			let editBtn = document.createElement('button');
+			let deleteBtnTxtNode =  document.createTextNode('Delete');
+			let editBtnTxtNode =  document.createTextNode('Edit');
+			deleteBtn.append(deleteBtnTxtNode);
+			editBtn.append(editBtnTxtNode);
+
+			span1.classList = 'name-span';
+			span2.classList = 'email-span';
+			p.classList = 'message-p';
+			deleteBtn.classList = 'btn delete';
+			editBtn.classList = 'btn edit';
+			
+			
+			span1.append(postName);
+			span2.append(postEmail);
+			p.append(postMessage);
+			
+			postContent.append(span1);
+			postContent.append(span2);
+			postContent.append(p);
+			postContent.append(editBtn);
+			postContent.append(deleteBtn);
+			
+			posts.append(postContent);
+
+			let deleteButton = document.querySelectorAll('.delete');
+			let editButton = document.querySelectorAll('.edit');
+			let pureArray = Array.from(deleteButton);
+			let pureArray_1 = Array.from(editButton);
+
+			deleteButton.forEach(btn => {
+				btn.onclick = function () {
+					btn.parentNode.style.display = 'none';
+				}
+			});
+			
+			let btnTrue = true;
+			let save = document.createElement('button');
+			let cancel = document.createElement('button');
+			let saveTxtNode = document.createTextNode('Save');
+			let cancelTxtNode =  document.createTextNode('Cancel');
+			
+
+			editButton.forEach((btn)=> {
+				btn.onclick = function() {
+					if (btnTrue === true) {
+						btn.innerHTML = 'Save';
+						btn.nextSibling.innerHTML = 'Cancel';
+						btn.previousSibling.innerHTML = '<textarea rows=\'7\' cols=\'50\'>'+btn.previousSibling.textContent+'</textarea>';
+					}
+				}
+			})
+			console.log(posts);
+			name.value = '';
+			email.value = '';
+			message.value = '';
+		}
+	})
+
+
