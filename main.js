@@ -64,14 +64,22 @@
 
 			editButton.forEach((btn)=> {
 				btn.onclick = function() {
-					if (btnTrue === true) {
+					if (btn.innerHTML === 'Edit') {
 						btn.innerHTML = 'Save';
 						btn.nextSibling.innerHTML = 'Cancel';
 						btn.previousSibling.innerHTML = '<textarea rows=\'7\' cols=\'50\'>'+btn.previousSibling.textContent+'</textarea>';
-					}
+						btn.previousSibling.classList = 'textarea';
+					}else if(btn.innerHTML === 'Save'){
+						let textAreaContent = document.querySelectorAll('.textarea');
+						btn.innerHTML = 'Edit';
+						btn.previousSibling.innerHTML = '<p>'+ btn.previousSibling.textContent + '</p>';
+						btn.nextSibling.innerHTML = 'Delete';
+					}	
 				}
 			})
-			console.log(posts);
+			
+
+
 			name.value = '';
 			email.value = '';
 			message.value = '';

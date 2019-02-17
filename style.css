@@ -49,6 +49,27 @@ button{
 	margin-top: 10px;
 
 }
+#name{
+	transition: 500ms ease-in-out;
+}
+#name:focues{
+	transition: 500ms ease-in-out;
+}
+#email{
+	transition: 500ms ease-in-out;
+}
+#email:focus{
+	transition: 500ms ease-in-out;
+}
+#message{
+	transition: 500ms ease-in-out;
+}
+#message:focus{
+	transition: 500ms ease-in-out;
+	transform: scale(1.2);
+	box-shadow: 0px 10px 10px rgba(0,0,0,.5);
+	margin: 1em 0em 1em 0em;
+}
 
 #posts{
 	margin: 3em 0em 3em 0;
@@ -92,6 +113,7 @@ button{
 	}
 	#posts div.posts span{
 		margin-right: 20px;
+		display: block;
 	}
 	#posts div.posts span:nth-child(2){
 		font-weight: none;
@@ -111,7 +133,15 @@ ul.list-group li{
 	line-height: 50px;
 }
 #posts div.posts textarea{
+	transition: 500ms ease-in-out;
 	padding: .5em;
 	width: 100%;
 	border: none;
+}
+
+#posts div.posts textarea:focus{
+	margin-top: 1em;
+	transition: 500ms ease-in-out;
+	transform: scale(1.2);
+	box-shadow: 0px 10px 10px rgba(0,0,0,.5);
 }
