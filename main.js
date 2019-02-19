@@ -69,17 +69,20 @@
 						btn.nextSibling.innerHTML = 'Cancel';
 						btn.previousSibling.innerHTML = '<textarea rows=\'7\' cols=\'50\'>'+btn.previousSibling.textContent+'</textarea>';
 						btn.previousSibling.classList = 'textarea';
+						console.log(postContent);
 					}else if(btn.innerHTML === 'Save'){
-						let textAreaContent = document.querySelectorAll('.textarea');
 						btn.innerHTML = 'Edit';
-						btn.previousSibling.innerHTML = '<p>'+ btn.previousSibling.textContent + '</p>';
 						btn.nextSibling.innerHTML = 'Delete';
+						let textarea = document.querySelectorAll('.textarea');
+						textarea.forEach(txtArea => {
+							txtArea.onkeyup = function (event) {
+								console.log('I am keyup')
+								// btn.previousSibling.innerHTML = "<p>" + textarea.event.target.value + "</p>";
+							}
+						})
 					}	
 				}
 			})
-			
-
-
 			name.value = '';
 			email.value = '';
 			message.value = '';

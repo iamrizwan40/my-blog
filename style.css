@@ -3,7 +3,8 @@ body{
 	margin: 0;
 	font-size: 18px;
 	font-weight: 600;
-	background-color:#fff;
+	background-color:#111c2d;
+	color: white;
 }
 .head{
 	background-image: linear-gradient(rgba(144, 155, 132, .2), rgba(244, 255, 232, .2));
@@ -66,13 +67,15 @@ button{
 }
 #message:focus{
 	transition: 500ms ease-in-out;
-	transform: scale(1.2);
-	box-shadow: 0px 10px 10px rgba(0,0,0,.5);
+	transform: scale(1.1);
+	box-shadow: 0px 40px 40px rgba(0,0,0,.5);
 	margin: 1em 0em 1em 0em;
+	border: none;
 }
 
 #posts{
 	margin: 3em 0em 3em 0;
+	transition: 500ms ease-in-out;
 }
 
 #posts div.posts{
@@ -125,6 +128,19 @@ button{
 		font-weight: none;
 		color: #333;
 		font-size: 14px;
+	}
+	#posts div.posts textarea{
+	transition: 500ms ease-in-out;
+	padding: .5em;
+	width: 100%;
+	border: none;
+	}
+
+	#posts div.posts textarea:focus{
+		margin-top: 1em;
+		transition: 500ms ease-in-out;
+		transform: scale(1);
+		box-shadow: 0px 10px 10px rgba(0,0,0,.5);
 	}
 }
 

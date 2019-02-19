@@ -16,52 +16,53 @@
     <!-- Google Font Families -->
     <link href="https://fonts.googleapis.com/css?family=Acme|Anton|Arvo|Charm|Condiment|Indie+Flower|Lobster|Noto+Serif+SC|Pacifico|Peralta|Permanent+Marker|Ribeye|Righteous|Shadows+Into+Light|Source+Code+Pro|Stint+Ultra+Expanded|Timmana|Yanone+Kaffeesatz" rel="stylesheet">
 
-    <title>Task Manager</title>
+    <title>jQuery</title>
 </head>
 <body>
 
 
         <div class="container">
-            <div class="head">
-                <h1 class="display-2">Mohd Rizwan</h1>
-                <p>
-                    Hey, there everone, I am Mohd Rizwan Ansari. I am a full stack web developer in Microsoft Corporation
-                </p>
-                <ul>
-                    <li class="float-left"><a href="3">Home</a></li>
-                    <li class="float-left"><a href="#">Schools</a></li>
-                    <li class="float-left"><a href="#">Scholarship</a></li>
-                    <li class="float-left"><a href="#">Contact</a></li>
-                    <li class="float-left"><a href="#">About</a></li>
-                    <p class="clearfix"></p>
-                </ul>
                 
-            </div>
-            <form class="mt-5">
-                <div class="form-group">
-                    <label for='name'>Full Name</label> 
-                    <input type="text" placeholder="Enter Full Name" class="form-control" id="name">
+            <ul class="list-group my-5">
+                <li class="list-group-item">
+                    <a href="#">Item One</a>
+                    <button aria-label="Close Account Info Modal Box" class="btn btn-sm btn-light float-right">&times;</button>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Item Two</a>
+                    <button aria-label="Close Account Info Modal Box" class="btn btn-sm btn-light float-right">&times;</button>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Item Three</a>
+                    <button aria-label="Close Account Info Modal Box" class="btn btn-sm btn-light float-right">&times;</button>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Item Four</a>
+                    <button aria-label="Close Account Info Modal Box" class="btn btn-sm btn-light float-right">&times;</button>
+                </li>
+                <li class="list-group-item">
+                    <a href="#">Item Five</a>
+                    <button aria-label="Close Account Info Modal Box" class="btn btn-sm btn-light float-right">&times;</button>
+                </li>
+            </ul> 
+            <h1>Hello, World!</h1>
+            <form style="width: 20rem;">  
+               <div class="email">
+                    <label for="email">Email:</label>
+                    <br>
+                    <input type="text" placeholder="Entet E-Mail" id="email" class="form-control" />
+               </div>
+                <br>
+                <div class="confEmail">
+                    <label for="confEmail">Conform E-Mail</label>
+                    <br>
+                    <input type="text" placeholder="Entet E-Mail" id="confEmail" class="form-control" />
                 </div>
-               
-                <div class="form-group">
-                    <label for='email'>E-Mail</label>
-                    <input type="email" placeholder="Enter E-Mail" class="form-control" required="true" id="email">
-                </div>
-                <div class="form-group">
-                    <label for='message'>Message</label>
-                    <textarea cols="20" rows="7" class="form-control" placeholder="Message" id="message"></textarea>
-                </div>
-
-                <button class="btn btn-outline-danger float-right post">Post</button>
-                <p class="clearfix"></p>
             </form>
-            <div id="posts">
-            </div>
-
-            <iframe src="http://www.facebook.com"></iframe>
         </div>
 
 
+    
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
